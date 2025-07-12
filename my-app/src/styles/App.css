@@ -1,0 +1,215 @@
+body {
+  margin: 0;
+}
+
+.viewer-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.viewer-content {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+.chapter-viewer {
+  flex: 3;
+  overflow-y: auto;
+  text-align: left;
+}
+
+.line {
+  padding: 10px 0 10px 0;
+}
+
+.hoverable-line:hover {
+  cursor: pointer;
+}
+
+.scroll-padding {
+  height: 300vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.scroll-message {
+  font-size: 18px;
+  color: #666;
+}
+
+.header {
+  padding: 16px;
+  background-color: #f8f9fa;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+  position: relative;
+}
+
+.dynamic-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.chapter-title {
+  font-size: 20px;
+  margin: 0;
+  flex-grow: 1;
+  text-align: center;
+}
+
+.settings-container {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  z-index: 10000;
+}
+
+.settings-menu {
+  position: fixed;
+  top: 50px;
+  right: 16px;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  z-index: 10000;
+  width: 300px;
+
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.settings-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 8px;
+}
+
+.settings-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  font-size: 14px;
+  text-align: left;
+}
+
+.settings-item:last-child {
+  margin-bottom: 0;
+}
+
+.settings-label {
+  font-size: 14px;
+  color: #333;
+  margin-right: 8px;
+}
+
+.slider-container {
+  width: 100%;
+}
+
+.file-input {
+  margin: 8px 0;
+}
+
+.chapter-list {
+  border-right: 1px solid #ddd;
+  padding: 16px;
+  overflow-y: auto;
+  background-color: #f9f9f9;
+}
+
+.chapter-ul {
+  margin: 0;
+  padding: 0;
+}
+
+.chapter-item {
+  margin: 4px 0;
+}
+
+.chapter-button {
+  width: 100%;
+  text-align: left;
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.chapter-button.Mui-selected {
+  background-color: #e3f2fd !important;
+  color: #0d47a1;
+  font-weight: bold;
+}
+
+.footer {
+  padding: 16px;
+  border-top: 1px solid #ddd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f8f9fa;
+}
+
+.nav-button {
+  font-size: 16px;
+  min-width: 120px;
+}
+
+.char-pinyin-container {
+  display: inline-flex;
+  flex-direction: column;
+
+  align-items: stretch;
+  margin: 0 1px;
+  position: relative;
+  vertical-align: baseline;
+  line-height: normal;
+}
+
+.char-pinyin-container .pinyin-text.placeholder {
+  visibility: hidden;
+}
+
+.pinyin-text {
+  font-size: 0.6em;
+  color: #555;
+  line-height: 1.2;
+  display: block;
+  text-align: left;
+  user-select: none;
+  margin: auto;
+}
+
+.char-text {
+  font-size: 1em;
+  line-height: 1.2;
+  display: block;
+  text-align: left;
+}
+
+.MuiTooltip-popper {
+  z-index: 300000 !important;
+}
+
+.MuiPopover-root,
+.MuiSelect-root,
+.MuiSelect-menu,
+.MuiMenu-paper {
+  z-index: 20001 !important;
+}
