@@ -24,6 +24,10 @@ MinisCAT is a web-based Computer Assisted Translation (CAT) tool that seeks to b
 
 **View live application**: [https://brave-sea-05d45170f.5.azurestaticapps.net/](https://brave-sea-05d45170f.5.azurestaticapps.net/)
 
+<p align="left">
+  <img src="image.png" width="200px" />
+</p>
+
 ## Setup Instructions
 
 ### Prerequisites
