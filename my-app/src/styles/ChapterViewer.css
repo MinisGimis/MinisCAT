@@ -1,0 +1,17 @@
+.chapter-viewer-content {
+    padding: 0;
+    font-size: 16px;
+}
+
+.chapter-viewer-content.dynamic-padding {
+    padding-left: var(--viewer-padding, 16px);
+    padding-right: var(--viewer-padding, 16px);
+}
+
+.chapter-viewer-content.dynamic-font-size {
+    font-size: var(--font-size, 16px);
+}
+
+.empty-line {
+    margin-bottom: 1em;
+}

@@ -1,0 +1,13 @@
+.line-delete-modal-description {
+    margin-bottom: 16px;
+}
+
+.line-delete-modal-content {
+    padding: 16px;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+    font-family: monospace;
+    font-size: 0.9em;
+    max-width: 400px;
+    word-break: break-word;
+}

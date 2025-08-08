@@ -1,0 +1,74 @@
+.import-dialog-preview-title {
+    margin-bottom: 8px;
+}
+
+.import-dialog-file-preview {
+    max-height: 200px;
+    overflow: auto;
+    margin-bottom: 16px;
+    padding: 8px;
+    background-color: #f7f7f7;
+    font-family: monospace;
+    font-size: 14px;
+}
+
+.import-dialog-regex-field {
+    margin-bottom: 16px;
+}
+
+.import-dialog-suggestions-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.import-dialog-suggestions-label {
+    margin-bottom: 4px;
+}
+
+.import-dialog-suggestion-button {
+    text-transform: none;
+    justify-content: flex-start;
+    width: fit-content;
+}
+
+.import-dialog-error {
+    margin-bottom: 8px;
+}
+
+.import-dialog-toc {
+    max-height: 200px;
+    overflow: auto;
+    padding: 8px;
+    background-color: #f7f7f7;
+    font-family: monospace;
+    font-size: 14px;
+}
+
+.import-dialog-chapter-preview {
+    max-height: 150px;
+    overflow: auto;
+    padding: 8px;
+    background-color: #f0f8ff;
+    font-family: monospace;
+    font-size: 12px;
+    border: 1px solid #ccc;
+}
+
+.import-dialog-chapter-preview-title {
+    color: #666;
+    margin-bottom: 8px;
+}
+
+.import-dialog-chapter-preview-content {
+    white-space: pre-wrap;
+}
+
+.import-dialog-no-chapters {
+    color: #888;
+}
+
+.import-dialog-chapter-preview-section {
+    margin-top: 16px;
+}

@@ -23,7 +23,7 @@ body {
 }
 
 .line {
-  padding: 10px 0 10px 0;
+  line-height: 1.8;
 }
 
 .hoverable-line:hover {
@@ -172,14 +172,13 @@ body {
 }
 
 .char-pinyin-container {
-  display: inline-flex;
-  flex-direction: column;
-
-  align-items: stretch;
-  margin: 0 1px;
+  display: inline-block;
   position: relative;
+  margin: 0 1px;
   vertical-align: baseline;
-  line-height: normal;
+  line-height: 1.8;
+  padding-top: 0.8em;
+  text-align: center;
 }
 
 .char-pinyin-container .pinyin-text.placeholder {
@@ -189,27 +188,352 @@ body {
 .pinyin-text {
   font-size: 0.6em;
   color: #555;
-  line-height: 1.2;
-  display: block;
-  text-align: left;
+  line-height: 1;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
   user-select: none;
-  margin: auto;
+  white-space: nowrap;
 }
 
 .char-text {
   font-size: 1em;
   line-height: 1.2;
   display: block;
+  text-align: center;
+  margin: 0;
+}
+
+.line span:not(.char-pinyin-container) {
+  vertical-align: baseline;
+  line-height: inherit;
+}
+
+.block-pinyin-text {
+  font-size: 0.7em;
+  color: #555;
+  line-height: 1.2;
+  display: block;
+  text-align: left;
+  user-select: none;
+  margin-bottom: 0.3em;
+}
+
+.block-char-text {
+  font-size: 1em;
+  line-height: 1.4;
+  display: block;
   text-align: left;
 }
 
 .MuiTooltip-popper {
-  z-index: 300000 !important;
+  z-index: 9999 !important;
 }
 
 .MuiPopover-root,
 .MuiSelect-root,
 .MuiSelect-menu,
 .MuiMenu-paper {
-  z-index: 20001 !important;
+  z-index: 999 !important;
+}
+
+.welcome-container {
+  text-align: center;
+  padding: 32px 0;
+}
+
+.welcome-title {
+  margin-bottom: 16px;
+}
+
+.welcome-subtitle {
+  margin-bottom: 16px;
+}
+
+.file-upload-input {
+  display: none;
+}
+
+.upload-button-container {
+  margin-top: 16px;
+}
+
+.settings-button {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  z-index: 1000;
+}
+
+.error-alert {
+  margin-bottom: 16px;
+}
+
+.content-container {
+  margin-bottom: 24px;
+  height: calc(100vh - 1px);
+  overflow-y: auto;
+}
+
+.chapter-header {
+  margin-bottom: 16px;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-top: 16px;
+}
+
+.chapter-title-text {
+  margin: 0;
+}
+
+.translate-button {
+  margin-right: 8px;
+}
+
+.clear-translation-button {
+  margin-right: 8px;
+}
+
+.glossary-button {
+  margin-right: 8px;
+}
+
+.line-pair {
+  margin-bottom: 1em;
+}
+
+.line-clickable {
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+  line-height: 1.6;
+}
+
+.line-clickable:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.line-translating {
+  background-color: rgba(255, 193, 7, 0.1);
+}
+
+.line-translating-clickable {
+  background-color: rgba(255, 193, 7, 0.1);
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+  line-height: 1.6;
+}
+
+.line-translating-clickable:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.translation-line {
+  color: #666;
+  font-size: 1em;
+  line-height: 1.6;
+  letter-spacing: normal;
+}
+
+.translation-line-clickable {
+  color: #666;
+  font-size: 1em;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+  line-height: 1.6;
+  letter-spacing: normal;
+}
+
+.translation-line-clickable:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.translation-line-translating {
+  color: #666;
+  font-size: 1em;
+  background-color: rgba(255, 193, 7, 0.1);
+  line-height: 1.6;
+  letter-spacing: normal;
+}
+
+.translation-line-translating-clickable {
+  color: #666;
+  font-size: 1em;
+  background-color: rgba(255, 193, 7, 0.1);
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+  line-height: 1.6;
+  letter-spacing: normal;
+}
+
+.translation-line-translating-clickable:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.translation-progress {
+  margin-left: 8px;
+  color: #ffc107;
+  vertical-align: middle;
+}
+
+.original-line-translating {
+  background-color: rgba(255, 193, 7, 0.1);
+  border-radius: 4px;
+}
+
+.scroll-continue-container {
+  height: 300vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.scroll-continue-text {
+  font-size: 18px;
+  color: #666;
+}
+
+.translation-edit-field {
+  font-size: 1em;
+  line-height: 1.6;
+  letter-spacing: normal;
+}
+
+.translation-edit-field .MuiInputBase-root {
+  font-size: 1em;
+  line-height: 1.6;
+  letter-spacing: normal;
+  padding: 0;
+}
+
+.translation-edit-field .MuiInputBase-root:before {
+  border-bottom: none;
+}
+
+.translation-edit-field .MuiInputBase-root:after {
+  border-bottom: none;
+}
+
+.translation-edit-field .MuiInputBase-root:hover:before {
+  border-bottom: none;
+}
+
+.translation-edit-field .MuiInputBase-root.Mui-focused:after {
+  border-bottom: none;
+}
+
+.translation-edit-field .MuiInputBase-root.Mui-focused {
+  background-color: transparent;
+}
+
+.translation-edit-field .MuiInputBase-input {
+  padding: 0;
+  line-height: 1.6;
+  font-size: 1em;
+  letter-spacing: normal;
+}
+
+.translation-edit-field .MuiInputBase-input:focus {
+  background-color: transparent;
+}
+
+.translation-edit-field .MuiInputBase-inputMultiline {
+  padding: 0;
+  line-height: 1.6;
+  font-size: 1em;
+  letter-spacing: normal;
+}
+
+.translation-edit-field .MuiInputBase-inputMultiline:focus {
+  background-color: transparent;
+}
+
+.translation-edit-field-translation {
+  color: #666;
+  font-size: 1em;
+  font-weight: 400;
+  font-family: inherit;
+  letter-spacing: normal;
+  width: 100%;
+  display: block;
+}
+
+.translation-edit-field-translation .MuiInputBase-root {
+  color: #666;
+  font-size: 1em;
+  font-weight: 400;
+  font-family: inherit;
+  line-height: 1.6;
+  letter-spacing: normal;
+  padding: 0;
+  width: 100%;
+  display: block;
+}
+
+.translation-edit-field-translation .MuiInputBase-root:before {
+  border-bottom: none;
+}
+
+.translation-edit-field-translation .MuiInputBase-root:after {
+  border-bottom: none;
+}
+
+.translation-edit-field-translation .MuiInputBase-root:hover:before {
+  border-bottom: none;
+}
+
+.translation-edit-field-translation .MuiInputBase-root.Mui-focused:after {
+  border-bottom: none;
+}
+
+.translation-edit-field-translation .MuiInputBase-root.Mui-focused {
+  background-color: transparent;
+}
+
+.translation-edit-field-translation .MuiInputBase-input {
+  padding: 0;
+  line-height: 1.6;
+  color: #666;
+  font-size: 1em;
+  font-weight: 400;
+  font-family: inherit;
+  letter-spacing: normal;
+  width: 100%;
+  display: block;
+}
+
+.translation-edit-field-translation .MuiInputBase-input:focus {
+  background-color: transparent;
+}
+
+.translation-edit-field-translation .MuiInputBase-inputMultiline {
+  padding: 0;
+  line-height: 1.6;
+  color: #666;
+  font-size: 1em;
+  font-weight: 400;
+  font-family: inherit;
+  letter-spacing: normal;
+  width: 100%;
+  display: block;
+}
+
+.translation-edit-field-translation .MuiInputBase-inputMultiline:focus {
+  outline: none;
+  border-color: #1976d2;
+  box-shadow: 0 0 0 2px rgba(25, 118, 210, 0.2);
+}
+
+.inline-translation {
+  color: #666;
+  font-style: italic;
+  margin-left: 8px;
+  font-size: 0.9em;
 }

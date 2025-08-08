@@ -1,0 +1,23 @@
+.settings-dialog-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.settings-accordion {
+    box-shadow: none;
+}
+
+.settings-accordion-summary {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.settings-save-api-key-button {
+    align-self: flex-start;
+}
+
+.settings-file-input {
+    display: none;
+}

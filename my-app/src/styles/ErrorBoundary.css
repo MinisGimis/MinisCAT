@@ -1,0 +1,25 @@
+.error-boundary-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 24px;
+    text-align: center;
+}
+
+.error-boundary-description {
+    margin-bottom: 24px;
+}
+
+.error-boundary-debug {
+    margin-top: 24px;
+    padding: 16px;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+    text-align: left;
+}
+
+.error-boundary-debug-text {
+    font-size: 0.8rem;
+}

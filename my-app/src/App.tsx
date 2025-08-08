@@ -1,17 +1,17 @@
-import React from "react";
-import { AppProvider } from "./contexts/AppContext";
-import AppRouter from "./Router";
-import ErrorBoundary from "./components/ui/ErrorBoundary";
-import "./styles/App.css";
+import React from 'react';
+import { AppProvider } from './contexts/AppContext';
+import AppRouter from './Router';
+import ErrorBoundary from './components/ErrorBoundary';
+import './styles/App.css';
 
-const App: React.FC = () => {
-  return (
-    <ErrorBoundary>
-      <AppProvider>
-        <AppRouter />
-      </AppProvider>
-    </ErrorBoundary>
-  );
+const App = () => {
+    return (
+        <ErrorBoundary>
+            <AppProvider>
+                <AppRouter />
+            </AppProvider>
+        </ErrorBoundary>
+    );
 };
 
-export default App;
+export default App; 

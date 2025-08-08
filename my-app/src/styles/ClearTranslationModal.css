@@ -1,0 +1,27 @@
+.clear-translation-modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 11px 15px -7px rgba(0, 0, 0, 0.2), 0 24px 38px 3px rgba(0, 0, 0, 0.14), 0 9px 46px 8px rgba(0, 0, 0, 0.12);
+    padding: 32px;
+}
+
+.clear-translation-modal-description {
+    margin-bottom: 24px;
+}
+
+.clear-translation-options {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.clear-translation-actions {
+    margin-top: 24px;
+    display: flex;
+    justify-content: flex-end;
+}
